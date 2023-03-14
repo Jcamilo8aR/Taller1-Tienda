@@ -29,6 +29,11 @@ export function pintarProductos(productos){
         descripcion.classList.add("text-center","d-none")
         descripcion.textContent=producto.descripcion
 
+        // PRECIO EN PESOS
+        let cop=document.createElement("h1")
+        cop.classList.add("text-center","fw-bold","d-none")
+        cop.textContent=producto.cop
+
         // DETECTANDO EVENTO    
         tarjeta.addEventListener("mouseover",function(){
             imagen.src=producto.fotos[1]
@@ -37,12 +42,19 @@ export function pintarProductos(productos){
         tarjeta.addEventListener("mouseleave",function(){
             imagen.src=producto.fotos[0]
         })
+
+
+
+        
+
+        
     
         // PADRES E HIJOS
         tarjeta.appendChild(imagen)
         tarjeta.appendChild(nombre)
         tarjeta.appendChild(precio)
         tarjeta.appendChild(descripcion)
+        tarjeta.appendChild(cop)
         columna.appendChild(tarjeta)
         fila.appendChild(columna)
     })  
