@@ -16,7 +16,8 @@ fila.addEventListener("click",function(evento){
     datosProductoSeleccionado.nombre=tarjeta.querySelector("h6").textContent
     datosProductoSeleccionado.precio=tarjeta.querySelector("h7").textContent
     datosProductoSeleccionado.descripcion=tarjeta.querySelector(".d-none").textContent
-    datosProductoSeleccionado.cop=tarjeta.querySelector(".fw-bold",".d-none").textContent
+    datosProductoSeleccionado.precio2=tarjeta.querySelector(".fs-5",".d-none").textContent
+    
 
     // USAREMOS LA MEMORIA DEL PC PARA GUARDAR ESTA INFO (CACHE - COOKIES)
     localStorage.setItem("producto",JSON.stringify(datosProductoSeleccionado))

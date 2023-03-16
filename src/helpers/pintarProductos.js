@@ -22,7 +22,7 @@ export function pintarProductos(productos){
         // CREAR UN PRECIO
         let precio=document.createElement("h7")
         precio.classList.add("text-center", "text-success", "fw-bold")
-        precio.textContent="USD $"+producto.precio
+        precio.textContent="COP $"+producto.precio
 
         // CREAR UNA DESCRIPCION
         let descripcion=document.createElement("h6")
@@ -30,13 +30,14 @@ export function pintarProductos(productos){
         descripcion.textContent=producto.descripcion
 
         // PRECIO EN PESOS
-        let cop=document.createElement("h1")
-        cop.classList.add("text-center","fw-bold","d-none")
-        cop.textContent=producto.cop
+        let precio2=document.createElement("h1")
+        precio2.classList.add("text-center","fs-5","text-success","d-none")
+        precio2.textContent="USD $"+producto.precio2
 
         // DETECTANDO EVENTO    
         tarjeta.addEventListener("mouseover",function(){
             imagen.src=producto.fotos[1]
+            precio2.classList.add("d-print","d-block")
         })
 
         tarjeta.addEventListener("mouseleave",function(){
@@ -54,7 +55,7 @@ export function pintarProductos(productos){
         tarjeta.appendChild(nombre)
         tarjeta.appendChild(precio)
         tarjeta.appendChild(descripcion)
-        tarjeta.appendChild(cop)
+        tarjeta.appendChild(precio2)
         columna.appendChild(tarjeta)
         fila.appendChild(columna)
     })  
