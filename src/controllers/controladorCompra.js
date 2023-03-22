@@ -43,7 +43,6 @@ cantidad.addEventListener("change",function(){
 // VER PRECIO CANTIDAD PRODUCTOS EN DOLARES 
 precio2.addEventListener("click",function(){
     precio.textContent="USD $"+infoProducto.precioUSD*cantidad.value
-    precio2.classList.add("d-none")
     cantidad.addEventListener("change",function(){
         precio.textContent="USD $"+infoProducto.precioUSD*cantidad.value
     })

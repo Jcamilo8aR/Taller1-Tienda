@@ -32,7 +32,7 @@ export function pintarProductos(productos){
         // PRECIO EN DOLARES
         let precioUSD=document.createElement("h2")
         precioUSD.classList.add("text-center","fs-3","text-success","d-none")
-        precioUSD.textContent=producto.precio2
+        precioUSD.textContent=Math.trunc(producto.precio/4800)
 
         // PRECIO 
         let precioCOP=document.createElement("h2")
