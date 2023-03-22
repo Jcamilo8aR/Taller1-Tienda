@@ -8,6 +8,7 @@ console.log(infoProducto)
 let foto=document.getElementById("foto")
 let nombre=document.getElementById("nombre")
 let precio=document.getElementById("precio")
+let precio1=document.getElementById("precio1")
 let descripcion=document.getElementById("descripcion")
 let precio2=document.getElementById("precio2")
 let carrito=[]
@@ -30,6 +31,7 @@ if(infoCarrito != null){
 foto.src=infoProducto.foto
 nombre.textContent=infoProducto.nombre
 precio.textContent=infoProducto.precio
+precio1.textContent="$"+infoProducto.precioCOP
 descripcion.textContent=infoProducto.descripcion
 
 
