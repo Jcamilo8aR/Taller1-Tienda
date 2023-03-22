@@ -16,12 +16,16 @@ fila.addEventListener("click",function(evento){
     datosProductoSeleccionado.nombre=tarjeta.querySelector("h6").textContent
     datosProductoSeleccionado.precio=tarjeta.querySelector("h7").textContent
     datosProductoSeleccionado.descripcion=tarjeta.querySelector(".d-none").textContent
-    datosProductoSeleccionado.precio2=tarjeta.querySelector(".fs-5",".d-none").textContent
+    datosProductoSeleccionado.precioCOP=tarjeta.querySelector(".fs-4",".d-none").textContent
+    datosProductoSeleccionado.precioUSD=tarjeta.querySelector(".fs-3",".d-none").textContent
+    
     
 
+    
     // USAREMOS LA MEMORIA DEL PC PARA GUARDAR ESTA INFO (CACHE - COOKIES)
     localStorage.setItem("producto",JSON.stringify(datosProductoSeleccionado))
-    
+
+
     window.location.href="./src/views/ampliarInfo.html"
 
     

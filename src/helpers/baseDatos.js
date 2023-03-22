@@ -22,7 +22,7 @@ export let productos = Array(
      nombre: "Cyberpunk 2077",
      descripcion: "Cyberpunk 2077 es una historia de acción y aventura en mundo abierto ambientada en Night City, una megalópolis obsesionada con el poder, el glamur y la modificación corporal. Tu personaje es V, un mercenario que persigue un implante único que permite alcanzar la inmortalidad.",
      fotos: ["https://firebasestorage.googleapis.com/v0/b/jcortienda.appspot.com/o/Cyberpunk_cover.jpg?alt=media&token=cb4d1935-9d8a-4a6d-ae0d-360af2b7cd43","https://firebasestorage.googleapis.com/v0/b/jcortienda.appspot.com/o/Cyberpunk_coverBW.jpg?alt=media&token=fd9df954-2c48-4ce2-bf4a-9bd9ce9e1d46"],
-     precio: 13000,
+     precio: 130000,
      precio2: 50,
      popularidad: 3.7
     },

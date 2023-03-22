@@ -29,33 +29,42 @@ export function pintarProductos(productos){
         descripcion.classList.add("text-center","d-none")
         descripcion.textContent=producto.descripcion
 
-        // PRECIO EN PESOS
-        let precio2=document.createElement("h1")
-        precio2.classList.add("text-center","fs-5","text-success","d-none")
-        precio2.textContent="USD $"+producto.precio2
+        // PRECIO EN DOLARES
+        let precioUSD=document.createElement("h2")
+        precioUSD.classList.add("text-center","fs-3","text-success","d-none")
+        precioUSD.textContent=producto.precio2
 
-        // DETECTANDO EVENTO    
+        // PRECIO 
+        let precioCOP=document.createElement("h2")
+        precioCOP.classList.add("text-center","fs-4","text-success","d-none")
+        precioCOP.textContent=producto.precio
+
+
+        // MOSTAR SEGUNDA IMAGEN AL PASAR EL MOUSE POR ESTA
         tarjeta.addEventListener("mouseover",function(){
             imagen.src=producto.fotos[1]
             precio2.classList.add("d-print","d-block")
         })
 
-        tarjeta.addEventListener("mouseleave",function(){
-            imagen.src=producto.fotos[0]
-        })
+
+        // VOLVER A LA IMAGEN ANTERIOR CUANDO EL MOUSE SALGA DE ESTA
+            tarjeta.addEventListener("mouseleave",function(){
+                imagen.src=producto.fotos[0]
+            })
+            
+            // QUE VUELVA A LA PRIMERA AL DAR CLICK Y ASI VERLA EN LA PAGINA DE COMPRA
+            tarjeta.addEventListener("click",function(){
+                imagen.src=producto.fotos[0]
+            })
 
 
-
-        
-
-        
-    
         // PADRES E HIJOS
         tarjeta.appendChild(imagen)
         tarjeta.appendChild(nombre)
         tarjeta.appendChild(precio)
         tarjeta.appendChild(descripcion)
-        tarjeta.appendChild(precio2)
+        tarjeta.appendChild(precioCOP)
+        tarjeta.appendChild(precioUSD)
         columna.appendChild(tarjeta)
         fila.appendChild(columna)
     })  
